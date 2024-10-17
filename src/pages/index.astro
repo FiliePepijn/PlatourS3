@@ -1,0 +1,51 @@
+---
+import { ParseStatus } from "astro:schema";
+import Navbar from "../components/navbar";
+
+---
+
+<link rel="stylesheet" href="https://use.typekit.net/gyq5jpu.css">
+<link rel="stylesheet" href="../styles/style.css">
+<script src="/scripts/scrollEffect.js" defer></script> <!-- Add this line -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>P.Latour</title>
+    </head>
+    <header>
+        <Navbar client:idle />
+    </header>
+    <body>
+        <div class="image-container">
+            <img src="/platourlogo.svg" alt="">
+        </div>
+    </body>
+</html>
+
+<style>
+    :root {
+        --red: #f05454;
+        --blue: #23accf;
+        --darkblue: #222830;
+        --beige: #edd8c5;
+    }
+    body {
+        background: var(--darkblue);
+        transition: background-color 0.5s ease; /* Smooth transition for background color */
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow to prevent scrollbars */
+    }
+    img {
+        transition: transform 0.5s ease; /* Smooth transition for scaling */
+    }
+</style>

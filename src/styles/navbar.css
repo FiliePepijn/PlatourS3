@@ -1,0 +1,137 @@
+:root {
+    --red: #f05454;
+    --blue: #23accf;
+    --darkblue: #222830;
+    --beige: #edd8c5;
+}
+
+nav {
+    margin: 27px auto 0;
+    position: relative; 
+    width: 510px;
+    height: 50px;
+    background-color: var(--beige);
+    border-radius: 40px;
+    font-size: 0;
+    z-index: 1000; 
+
+
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--red);
+    cursor: pointer;
+    font-weight: 800;
+    transition: color 0.5s ease;
+}
+
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all 0.5s ease;
+  border-radius: 40px;
+  background-color: var(--red);
+  color: var(--beige) !important;   
+}
+
+nav a .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease;
+    border-radius: 40px;    
+}
+nav a.active {
+    color: var(--beige);
+}
+
+
+/* Assign widths for nav items */
+nav a:nth-child(1) {
+    width: 100px;
+}
+nav a:nth-child(2) {
+    width: 110px;
+}
+nav a:nth-child(3) {
+    width: 100px;
+}
+nav a:nth-child(4) {
+    width: 80px;
+}
+nav a:nth-child(5) {
+    width: 120px;
+}
+
+/* Hover effect for all links */
+
+  
+
+
+nav .start-home {
+    width: 100px;
+    left: 0;
+}
+
+nav .start-about {
+    width: 110px;
+    left: 100px;
+}
+
+nav .start-projects {
+    width: 100px;
+    left: 210px;
+}
+
+nav .start-lo {
+    width: 80px;
+    left: 310px;
+}
+
+nav .start-contact {
+    width: 120px;
+    left: 470px;
+}
+
+/* Sliding animation logic for each hover state */
+nav a:nth-child(1) ~ .animation,
+nav a.active:nth-child(1) ~ .animation {
+    width: 100px;
+    left: 0;
+}
+
+nav a:nth-child(2) ~ .animation,
+nav a.active:nth-child(2) ~ .animation {
+    width: 110px;
+    left: 100px;
+}
+
+nav a:nth-child(3) ~ .animation,
+nav a.active:nth-child(3) ~ .animation {
+    width: 100px;
+    left: 210px;
+}
+
+nav a:nth-child(4) ~ .animation,
+nav a.active:nth-child(4) ~ .animation {
+    width: 80px;
+    left: 310px;
+}
+
+nav a:nth-child(5) ~ .animation,
+nav a.active:nth-child(5) ~ .animation {
+    width: 120px;
+    left: 390px;
+}
